@@ -1,0 +1,68 @@
+/* The BRUNT site. Two pages App Review follows (privacy, support) and a front
+   door, so they are built for reading rather than for effect: one column, large
+   type, high contrast, and no webfont to wait on. */
+:root {
+  --ink: #f3e9d2;
+  --muted: #b3a88f;
+  --gold: #f0b94a;
+  --bg: #17111f;
+  --panel: #211829;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.65 ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+.eyebrow {
+  margin: 0 0 2rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+.eyebrow a { color: var(--gold); text-decoration: none; }
+h1 {
+  margin: 0 0 .35rem;
+  font-size: clamp(2rem, 7vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+}
+h2 {
+  margin: 2.5rem 0 .6rem;
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: .4rem; }
+a { color: var(--gold); }
+b { color: #fff; font-weight: 600; }
+.updated { color: var(--muted); font-size: .95rem; margin-bottom: 2rem; }
+.foot {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #ffffff1f;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.lede { font-size: 1.15rem; color: #ffffffd9; }
+.card {
+  background: var(--panel);
+  border: 1px solid #ffffff14;
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+  margin: 1.5rem 0;
+}
+@media (prefers-color-scheme: light) {
+  /* The page is dark on purpose, to sit beside the game. Light mode only
+     softens the contrast rather than inverting into something else. */
+  :root { --bg: #1d1526; }
+}
